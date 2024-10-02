@@ -1,12 +1,24 @@
-/* This program prompts the user for their name
- * and age, and then prints it back out. */
- 
-function main() {
-	let name = readLine("What is your name? ");
-	console.log("Hello " + name + ", nice to meet you!");
-	
-	let age = readInt("What is your age? ");
-	console.log("You r " + age + " yrs old.");
-}
+<!DOCTYPE html>
+     <head> 
+    <title>My Wallet</title>
+<script type="text/javascript">
+   currentCash = 40000;
 
-main();
+  function deductFromTotal(){
+
+  var spent = document.getElementById("money_spent");
+ currentCash -= spent;
+    return currentCash; } 
+ </script>
+</head>
+
+    <body>
+  <h2>Current total is: <script type="text/javascript">
+    document.write(currentCash);
+    </script> </h2>
+
+  <input type="amount" size= 25 Placeholder="How much did you spend today?" ID="money_spent" >       
+  <input type="button" value= "confirm" onClick="deductFromTotal()">
+
+    </body>
+    </html>
