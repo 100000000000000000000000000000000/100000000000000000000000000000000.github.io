@@ -1,32 +1,20 @@
-let currentCash = 40000;
-
-function deductFromTotal() {
-  var spent = document.getElementById("money_spent").value;
-  // check if the entered value is number
-  if (isNaN(Number(spent))) {
-    console.log("Numbers only")
-
-  } else {
-
-    //currentCash = currentCash - spent;
-    currentCash -= spent;
-    // give your h2 an id and then use getElementById ,better
-    document.querySelector("h2").textContent = `Current total is:${currentCash}`;
-
-  }
-}
-// deductFromTotal();
 <html>
-
-<head>
-  <title>My Wallet</title>
+<head> 
+<title>My Wallet</title>
 </head>
-
 <body>
-  <input type="amount" size=2 5 Placeholder="How much did you spend today?" id="money_spent">
-  <input type="button" value="confirm" onClick="deductFromTotal()">
-  <h2>Current total is:
-  </h2>
-</body>
+    <h2>Current total is: <span id="result">40000</span> </h2>
+    <input type="amount" size= 25 Placeholder="How much did you spend today?" id="money_spent" >       
+    <input type="button" value= "confirm" onClick="deductFromTotal()">
 
+<script type="text/javascript">
+var currentCash = 40000;
+
+function deductFromTotal(){
+
+var spent = document.getElementById("money_spent").value;
+document.getElementById('result').innerHTML = currentCash - spent; 
+} 
+</script>
+</body>
 </html>
